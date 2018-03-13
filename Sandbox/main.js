@@ -1,6 +1,6 @@
 // Déclarations de fonctions
 var a=function maFunc() {};
-// et 
+// et
 function maFunc(){};
 // sont correctes.
 // Par contre l'utilisation de var force la déclaration de la fonction avant son appel
@@ -40,7 +40,7 @@ var voiture={
     marque : 'Renault',
     roule : function() {
 
-    }
+    },
 }
 // Ajout d'un membre en dehors de la définition
 voiture.model = 'Twingo';
@@ -102,22 +102,63 @@ div.addEventListener('click',function(event){
                                                 console.log('parent')
                                             });
 
-// 9. Instanciation objet                                            
+// 9. Instanciation objet
+function afficheCompteur()
+{
+  console.log("Vitesse="+this.vitesse);
+}
 // Convention majuscule
 function Voiture(m,p){
   console.log('Hello voiture');
   this.model=m;
   this.puissance=p;
   console.log(this.model);
+
+
+  this.vitesse = 0;
+  this.accelerer = function (){
+      this.vitesse+=10;
+  }
+  this.ralentir = function (){
+      this.vitesse-=5;
+  }
+  this.afficheCompteur = afficheCompteur;
+
   return 55;
 }
 
+
+
 // Appel "classique" d'une fonction
 Voiture('Intel'); // le this sera window
-// Instanciation objet de la fonction 
+// Instanciation objet de la fonction
 mavoiture = new Voiture('Tipo'); // objet créé renvoyé vers this
-console.log(mavoiture.model);
-mavoiture = new Voiture('TipA'); // objet créé renvoyé vers this
 console.log(mavoiture.model);
 console.log(window.model);
 console.log(model);
+mavoiture.accelerer;
+mavoiture.afficheCompteur;
+mavoiture.ralentir;
+mavoiture.afficheCompteur;
+console.log('Hello voiture');
+
+function afficheVitesseVehicule(fn){
+    fn();
+}
+
+var btnA = document.getElementById('btn1');
+var btnR = document.getElementById('btn2');
+var btnC = document.getElementById('btn3');
+
+v = new Voiture;
+btnA.addEventListener('click',v.accelerer.bind(v));
+btnR.addEventListener('click',v.ralentir.bind(v));
+btnC.addEventListener('click',v.afficheCompteur.bind(v));
+
+// call = Appel en précisant le this
+accelerer.call(v);
+afficheCompteur.call(v);
+// apply = Appel en précisant le this et des paramètres sous forme de tableau
+//afficheCompteur.apply(v,10,20);
+// bind = gel le this en réf&érencant la référence à la fonction
+afficheCompteur.bind(v);
