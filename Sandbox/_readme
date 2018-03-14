@@ -19,3 +19,71 @@ C:\Users\Administrateur\AppData\Roaming
 
 Vérification packages installés :
 npm -g list --depth=0
+
+
+C:\Users\Administrateur.ADMIN-84OKF9K9Q\Documents\TP\Sandbox
+<cmd> ng new angtp
+
+npm install -g @angular-devkit/core
+npm i -D @schematics/angular
+npm i -D @angular-devkit/core
+npm i -D @angular-devkit/schematics
+
+
+<cmd> ng build  --> package le projet dans le répertoire dist
+ng e2e
+
+fichiers :
+tsconfig.json : decrit le typescript
+protractor.conf.js : configure selenium via ng e2e
+
+
+ng test
+
+## Angular : création d'un projet
+
+Création d'un projet
+
+`ng new my-dream-app`
+
+Ensuite, il ne faut pas oublier de se déplacer dans le dossier :
+
+`cd projetAngluar`
+
+Pour compiler le projet (même vide)
+
+`ng build`
+
+Dans le dossier `dist` on a le résultat de toute la compilation. C'est le contenu de ce dossier qu'on met sous le serveur (Apache...).
+
+
+Dans le dossier `dist`, il ya des fichiers map. il permet au débuggage. Il permet nottament de faire la correspondance entre le code obfusquer dans les js de `dist` et le réel code de src.
+
+Les dossiers :
+* le dossier `node_modules` contient les modules utilisés par l'application.
+Les fichiers importants :
+* `tslint.json` : rêgles de codage/check... standard.
+* `tsconfig.json` : paramétrage de la commande `tsc`. C'est dans ce fichier qu'on peux modifier notament les navigateurs visés (ecs5)
+* `protractor.conf.js` : outil de test de bout en bout. Pour lancer les tests `ng e2e`
+* `package.json` : c'est le fichier build.graddle (meta-données de l'application comme la **versions** et la licence qui par défaut est `MIT`)
+    * le ``
+* `package-lock.json` : c'est le fichier de liaison des versions/dépendances
+* `karma.conf.js` : tests unitaires. ce lance avec
+ `ng test`
+     * les tests personnels sont sous chaque composant.
+* `angular-cli.json`: 
+
+## un Composant
+Dans le dossier , `src\app\` 
+définition d'un composant :
+* `app.component.css` : un css : css que pour le composant
+* `app.component.html` : un html : l'interface du composant
+* `app.component.ts` : le comportement (le code)
+* `app.component.spec.ts` : un spec : les tests unitaires du composant
+
+
+## Outils d'editeur HTML avec Bootstrap
+* Pingendo : https://pingendo.com/download.html
+* mockito : 
+    *   http://site.mockito.org/
+    * https://www.docdoku.com/blog/2015/03/23/tests-unitaires-avec-mockito/
