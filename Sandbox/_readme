@@ -101,4 +101,7 @@ export class maClasse
 ....
 
 Sous angular les variables sont locales au fichier !!
-sauf si export de la variable, class ...;                      
+sauf si export de la variable, class ...;    
+on peut ensuite importer tout au partie de ce qui est exporté :
+import * as lib from 'declarations';
+import myClass from 'ficClass';          
