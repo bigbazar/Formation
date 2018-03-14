@@ -1,0 +1,8 @@
+<download> nodejs
+--> nodejs
+--> npm
+typescript : langage microsoft rajoutant syntaxe supplémentaire pour type le javascript
+Tous les fichiers JS sont déjà des fichiers typescript
+<cmd> npm -g  install typescript
+--> tsc
+<cmd> tsc main.ts
