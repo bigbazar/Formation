@@ -162,3 +162,9 @@ afficheCompteur.call(v);
 //afficheCompteur.apply(v,10,20);
 // bind = gel le this en réf&érencant la référence à la fonction
 afficheCompteur.bind(v);
+
+// Random integer between min (inclusive) and max (exclusive)
+var randomInt = function(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  };
+console.log(randomInt(0, 100));
