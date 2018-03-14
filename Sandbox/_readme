@@ -87,3 +87,17 @@ définition d'un composant :
 * mockito : 
     *   http://site.mockito.org/
     * https://www.docdoku.com/blog/2015/03/23/tests-unitaires-avec-mockito/
+
+
+ng serve : permet de lancer l'appli sur localhost:4200 et développer en //
+
+.angular-cli.json --> index.htlm app-root --> app.compoment.ts --> app.component.html    
+                      + 
+                      main.ts  --> app.module.ts
+
+@annotation --> "décoration" qui sera utilisée par la classe décrite en dessous
+....
+export class maClasse                      
+....
+
+                      
