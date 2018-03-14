@@ -1,8 +1,21 @@
+installation nodejs
 <download> nodejs
+2 modules installés
 --> nodejs
 --> npm
-typescript : langage microsoft rajoutant syntaxe supplémentaire pour type le javascript
-Tous les fichiers JS sont déjà des fichiers typescript
+
+Installation typescript :
 <cmd> npm -g  install typescript
 --> tsc
-<cmd> tsc main.ts
+typescript : langage microsoft rajoutant syntaxe supplémentaire pour type le javascript
+Tous les fichiers JS sont déjà des fichiers typescript
+Compilation du ts en js :
+<cmd> tsc -outDir out main.ts
+
+Installation angular :
+<cmd>npm -g install @angular/cli
+--> C:\Users\Administrateur.ADMIN-84OKF9K9Q\AppData\Roaming\npm\node_modules\@angular\cli
+C:\Users\Administrateur\AppData\Roaming
+
+Vérification packages installés :
+npm -g list --depth=0

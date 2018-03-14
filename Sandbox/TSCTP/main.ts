@@ -8,6 +8,6 @@ function ajout(a:number):number{
     return 1;
 }
 
-ajout();
+ajout(15);
 
 //ajout(12,1);
