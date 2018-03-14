@@ -100,4 +100,5 @@ ng serve : permet de lancer l'appli sur localhost:4200 et développer en //
 export class maClasse                      
 ....
 
-                      
+Sous angular les variables sont locales au fichier !!
+sauf si export de la variable, class ...;                      
