@@ -21,9 +21,7 @@ export class Zoo {
     }
 
     creerAnimal(p_animal) {
-        var a:Animal=new Carnivore();
-        a = p_animal;
-        this.animaux.push(a);
+        this.animaux.push(p_animal);
     }
     //var sum = 0;
     //this.animaux.array.forEach(element => {

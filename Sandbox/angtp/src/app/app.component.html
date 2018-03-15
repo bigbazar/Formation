@@ -1,7 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Bienvenue dans {{ title }}! <!-- {{  interpolation sur title : injection du texte à cet endroit -->
+    Bienvenue dans {{ title }}!
+    <!-- {{  interpolation sur title : injection du texte à cet endroit -->
   </h1>
   <!-- Utilisation de l'objet myanimal -->
   <h2>{{ myanimal.name}}</h2>
@@ -10,9 +11,10 @@
 </div>
 <div>
   <h2>
-    Les animaux :
-    <li *ngFor="let item of myzoo.animaux">{{ item.name }} {{ item.weight }}</li>
+    <app-animals></app-animals>
   </h2>
+</div>
+<div>
   <h2>
     Nouvel animal :
   </h2>
@@ -29,13 +31,23 @@
 <h2>Les liens: </h2>
 <ul>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+    <h2>
+      <a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a>
+    </h2>
   </li>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
+    <h2>
+      <a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a>
+    </h2>
   </li>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+    <h2>
+      <a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a>
+    </h2>
   </li>
 </ul>
-
+<!-- On fabrique le tag app-animal utilisable autant de fois que l'on veut !! -->
+<app-animal [animal]="animals[0]"></app-animal>
+<app-animal [animal]="animals[1]"></app-animal>
+<app-animal [animal]="selectedAnimal"></app-animal>
+<app-animal [animal]="selectedAnimal"></app-animal>
