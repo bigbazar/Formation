@@ -1,55 +1,62 @@
-class FirstAnimal{
+class FirstAnimal {
     // On utilise peut les getter/setter en javascript
     // les getter/setter sont particulièrement utilisé pour rajouter des controles sur les get & set
     // Si on voulait faire comme en JAVA avec getter/setter
     // private --> _
-    private _nom : string;
+    private _nom: string;
 
-    get get_nom(){
+    get get_nom() {
         return this._nom;
 
     }
-    set set_nom(p_nom){
-        if(p_nom=='fd') p_nom = 'lion';
+
+    set set_nom(p_nom : string) {
+        if (p_nom == 'fd') p_nom = 'lion';
         this._nom = p_nom;
 
     }
 
 }
 
+export abstract class Animal {
 
-export abstract class Animal{
-
-    abstract meatPerWeek():number;
+    abstract meatPerWeek(): number;
 
     // Déclaration inutile si dans le constructeur on déclare directement la propriété en utilisant le mot clé public
     //name : string;
 
 
     // on peut passer des valeurs par défaut des propriétés de l'ojbet
-    constructor(public name : string='no name', weight:number=0){
+    constructor(public name: string = 'no name', weight: number = 0) {
     }
-}   
-
-export class Herbivore extends Animal {
-  constructor(){
-      super();
-  }
-
-  meatPerWeek():number{
-    return 0;
 }
 
-}  
+interface AnimalSpec extends Animal {
+
+}
+
+export class Herbivore extends Animal {
+    // Même si on a pas accès au source d'Animal, l'interface de la classe nous y donne accès
+    chat : AnimalSpec;
+
+    constructor() {
+        super();
+    }
+
+    meatPerWeek(): number {
+        return 0;
+    }
+
+}
 
 export class Carnivore extends Animal {
-    constructor(){
+    constructor() {
         super();
 
     }
 
-    meatPerWeek():number{
+    meatPerWeek(): number {
         return 0; // this.weight/4;
     }
-    
+
 }  

@@ -1,0 +1,6 @@
+<form *ngIf="animal" class="form-inline">
+    <div class="form-group">
+        <input #myInput class="form-control" name="name" [(ngModel)]="myanimal.name" type="text" placeholder="name" />
+        <input class="form-control" name="weight" [(ngModel)]="myanimal.weight" type="number" placeholder="weight" />
+    </div>
+</form>

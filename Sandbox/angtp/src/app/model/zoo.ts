@@ -1,29 +1,31 @@
-import {Animal,Herbivore, Carnivore} from "./animal";
+import { Animal, Herbivore, Carnivore } from "./animal";
 // import { FUNCTION_TYPE } from '@angular/compiler/src/output';
 
 
 // déclaration de classe utilisable dans d'autres sources 
-export default class Zoo{
+export class Zoo {
     // protected = visible également par les classes filles
     //protected 
-    animaux:Animal[]=[];
-    animaux2:Array<Animal>=[];
+    animaux: Animal[] = [];
+    animaux2: Array<Animal> = [];
 
-    compute(){
-    function callback(item,index){
+    compute() {
+        function callback(item, index) {
 
+        }
+        this.animaux.forEach((item, index) => {
+        });
     }
-    this.animaux.forEach((item,index)=>{
-    });
-}
 
-constructor() {
+    constructor() {
+    }
 
-}
-    var sum=0;
-    this.animaux.array.forEach(element => {
-        sum+=element.weigth;
-    });
-
-
-}
+    creerAnimal(p_animal) {
+        var a:Animal=new Carnivore();
+        a = p_animal;
+        this.animaux.push(a);
+    }
+    //var sum = 0;
+    //this.animaux.array.forEach(element => {
+    //sum += element.weigth;
+};
