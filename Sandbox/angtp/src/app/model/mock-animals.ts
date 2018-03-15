@@ -1,6 +1,6 @@
-import { Animal, Carnivore } from './animal';
+import { ANimal, Carnivore } from './animal';
 
-export const ANIMALS: Carnivore[] = [
+export const ANIMALS: ANimal[] = [
   { name: 'Mr. Nice', weight: 10 },
   { name: 'Narco', weight: 10 },
   { name: 'Bombasto', weight: 10 },

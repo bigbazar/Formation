@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Animal, Carnivore } from '../model/animal';
+import { ANimal, Carnivore } from '../model/animal';
 import { ANIMALS } from '../model/mock-animals';
 
 @Component({
@@ -8,14 +8,10 @@ import { ANIMALS } from '../model/mock-animals';
   styleUrls: ['./animals.component.css']
 })
 export class AnimalsComponent implements OnInit {
-  animal: Carnivore = {
-    name: 'Lion',
-    weight: 100
-  };
-
+  
   animals = ANIMALS;
 
-  selectedAnimal: Animal;
+  selectedAnimal: ANimal;
 
 
     constructor() { }
@@ -23,7 +19,7 @@ export class AnimalsComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSelect(animal: Animal): void {
+  onSelect(animal: ANimal): void {
     this.selectedAnimal = animal;
   }
 }
