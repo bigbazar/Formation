@@ -1,3 +1,20 @@
-Les animaux :
-<li *ngFor="let animal of zoo.animaux">{{ animal.name }} {{ animal.weight }}</li>
-<app-animal [animal]="selectedAnimal"></app-animal>
+<h2>Les animaux</h2>
+<ul class="animals">
+  <li *ngFor="let animal of animals"
+    [class.selected]="animal === selectedAnimal"
+    (click)="onSelect(animal)">
+    <span class="badge">{{animal.name}}</span> {{animal.weight}}
+  </li>
+</ul>
+ 
+<div *ngIf="selectedAnimal">
+ 
+  <h2>{{ selectedAnimal.name | uppercase }} Details</h2>
+  <div><span>name: </span>{{selectedAnimal.name}}</div>
+  <div>
+    <label>poids:
+      <input [(ngModel)]="selectedAnimal.weight" placeholder="weight">
+    </label>
+  </div>
+ 
+</div>
