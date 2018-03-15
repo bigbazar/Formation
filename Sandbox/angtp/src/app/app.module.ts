@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    // Importation de FormsModule déclaré
     FormsModule
   ],
   providers: [],
