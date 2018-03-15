@@ -1,0 +1,17 @@
+/* CSS descend en cascade les */
+/* objet */
+button {
+
+}
+/* id DOM */
+#mybutton{
+
+}
+/* class */
+.button{
+
+}
+/* */
+.button+#mybutton{
+
+}

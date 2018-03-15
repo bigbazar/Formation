@@ -104,4 +104,23 @@ Sous angular les variables sont locales au fichier !!
 sauf si export de la variable, class ...;    
 on peut ensuite importer tout au partie de ce qui est exporté :
 import * as lib from 'declarations';
-import myClass from 'ficClass';          
+import myClass from 'ficClass'; 
+
+e2e
+node_modules
+src : source de notre projet
+    app
+    model    
+asset : images
+environnemnts : particularité de cible
+style.css : peu utilisé : plutôt dans app         
+
+outils de génération de CSS : less
+
+ng generate class zoo
+
+DEV : 
+editorcode
+tslint : permet de vérifier la syntaxe typescript à la volée dans visual studio code
+
+Promise en cours de remplacement par RxJS
