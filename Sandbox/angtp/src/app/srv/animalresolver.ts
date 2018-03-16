@@ -7,11 +7,11 @@ import { state, Injectable } from '@angular/core';
 @Injectable()
 export class AnimalResolver implements Resolve<Animal> {
   constructor() {
-    const id: number = Number.parseInt(state.root.params.id);
-    return ANIMALS[id];
+
   }
   // tslint:disable-next-line:no-shadowed-variable
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Animal | Observable<Animal> | Promise<Animal> {
-    throw new Error('Method not implemented.');
+    const id: number = Number.parseInt(state.root.params.id);
+    return ANIMALS[id];
   }
 }
