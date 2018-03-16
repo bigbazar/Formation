@@ -11,20 +11,18 @@ class FirstAnimal {
   }
 
   set set_nom(p_nom: string) {
-    if (p_nom == 'fd') p_nom = 'lion';
+    if (p_nom === 'fd') { p_nom = 'lion'; }
     this._nom = p_nom;
-
   }
-
 }
 
 export abstract class Animal {
   // Déclaration inutile si dans le constructeur on déclare directement la propriété en utilisant le mot clé public
-  name: string = 'no name';
-  weight: number = 0;
+  name = 'no name';
+  weight = 0;
 
   // on peut passer des valeurs par défaut des propriétés de l'ojbet
-  //constructor(public name: string = 'no name',  weight: number = 0) {
+  // constructor(public name: string = 'no name',  weight: number = 0) {
   constructor() {
   }
 
@@ -32,6 +30,7 @@ export abstract class Animal {
 
 }
 
+// tslint:disable-next-line:no-empty-interface
 interface AnimalSpec extends Animal {
 
 }

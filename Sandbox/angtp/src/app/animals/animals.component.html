@@ -1,3 +1,4 @@
+<div>
 <h2>Les animaux</h2>
 <ul class="animal">
   <li *ngFor="let animal of animals"
@@ -6,6 +7,7 @@
     <span class="badge">{{animal.name}}</span> {{animal.weight}}
   </li>
 </ul>
+</div>
 
 <div *ngIf="selectedAnimal">
 

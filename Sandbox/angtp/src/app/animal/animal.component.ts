@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Animal } from '../model/animal'
+import { Animal } from '../model/animal';
 
 @Component({
   selector: 'app-animal',

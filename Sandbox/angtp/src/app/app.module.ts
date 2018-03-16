@@ -13,7 +13,8 @@ import { AnimalsComponent } from './animals/animals.component';
 import { Routes, RouterModule } from '@angular/router';
 // Déclaration du tableau de routes
 const routes: Routes = [
-  {path: 'zoo', component: AnimalsComponent}
+  {path: 'animaux', component: AnimalsComponent},
+  {path: 'animal', component: AnimalComponent}
 ]
 
 @NgModule({
