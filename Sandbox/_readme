@@ -126,3 +126,7 @@ tslint : permet de vérifier la syntaxe typescript à la volée dans visual stud
 Promise en cours de remplacement par RxJS
 
 Documentation tous langages : devdocs
+
+ng generate component nom_composant
+
+Projet Heroes : npm install angular-in-memory-web-api --save
