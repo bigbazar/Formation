@@ -4,50 +4,34 @@
     Bienvenue dans {{ title }}!
     <!-- {{  interpolation sur title : injection du texte à cet endroit -->
   </h1>
-  <!-- Utilisation de l'objet myanimal -->
-  <h2>{{ carnivore.name}}</h2>
-  <!-- <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="> -->
-  <img width="300" alt="Zoo Logo" src="./assets/zoo.jpg">
 </div>
+<nav>
+    <!-- Affichage des liens vers les routes -->
+    <a routerLink="/zoo">Administration du Zoo</a>
+    <a routerLink="/zoo">Liste des animaux</a>
+  </nav>
+
+<!-- Déclaration d un routeur de pages -> déclaration des routes dans l'app.module.ts -->
+<router-outlet></router-outlet>
+
 <div>
-  <h2>
-    <app-animals></app-animals>
-  </h2>
-</div>
-<div>
-  <h2>
-    Nouvel animal :
-  </h2>
-  <!-- directive [ngModel]="animal.name" bindant html vers modele -->
-  <input [(ngModel)]="animal.name" type="text" placeholder="name"/>
-  <input [(ngModel)]="animal.weight" type="number" placeholder="weight"/>
-  <select #animalType>
-    <option value="herbivore">Herbivore</option>
-    <option value="carnivore">Carnivore</option>
-  </select>
-  <!-- On remonte un événement vers une fonction méthode de mon controleur côté ts -->
-  <button (click)="save()">Save</button>
-</div>
 <h2>Les liens: </h2>
-<ul>
-  <li>
-    <h2>
-      <a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a>
-    </h2>
-  </li>
-  <li>
-    <h2>
-      <a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a>
-    </h2>
-  </li>
-  <li>
-    <h2>
-      <a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a>
-    </h2>
-  </li>
-</ul>
-<!-- On fabrique le tag app-animal utilisable autant de fois que l'on veut !! -->
-<app-animal [animal]="animals[0]"></app-animal>
-<app-animal [animal]="animals[1]"></app-animal>
-<app-animal [animal]="selectedAnimal"></app-animal>
-<app-animal [animal]="selectedAnimal"></app-animal>
+  <ul>
+    <li>
+      <h2>
+        <a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a>
+      </h2>
+    </li>
+    <li>
+      <h2>
+        <a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a>
+      </h2>
+    </li>
+    <li>
+      <h2>
+        <a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a>
+      </h2>
+    </li>
+  </ul>
+</div>
+

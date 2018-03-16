@@ -10,6 +10,11 @@ import { AppComponent } from './app.component';
 import { AnimalComponent } from './animal/animal.component';
 import { AnimalsComponent } from './animals/animals.component';
 
+import { Routes, RouterModule } from '@angular/router';
+// Déclaration du tableau de routes
+const routes: Routes = [
+  {path: 'zoo', component: AnimalsComponent}
+]
 
 @NgModule({
   declarations: [
@@ -18,6 +23,8 @@ import { AnimalsComponent } from './animals/animals.component';
     AnimalsComponent
   ],
   imports: [
+    // importation des routes
+    RouterModule.forRoot(routes),
     BrowserModule,
     // Importation de FormsModule déclaré
     FormsModule
@@ -25,4 +32,5 @@ import { AnimalsComponent } from './animals/animals.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
