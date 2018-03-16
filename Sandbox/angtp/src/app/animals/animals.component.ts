@@ -16,12 +16,12 @@ export class AnimalsComponent implements OnInit {
 
     constructor(private route: ActivatedRoute) {
       // On souscrit au service permettant de gérer de facçon asynchrone le changement de route
-      const onRouteChange = (p) => {
-        const id: number = Number.parseInt(p.id);
-        this.selectedAnimal = ANIMALS[id];
+      // tslint:disable-next-line:prefer-const
+      let onRouteChange = (data: {animal:Animal}) => {
+          this.selectedAnimal = data.animal;
       }
-      this.route.params.subscribe(onRouteChange);
-     }
+    this.route.data.subscribe();
+    }
 
   ngOnInit() {
   }

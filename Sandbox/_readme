@@ -132,3 +132,6 @@ ng generate component nom_composant
 Projet Heroes : npm install angular-in-memory-web-api --save
 
 ng generate service Zoo
+
+Resolveur : service injectable permettant de récupérer un objet --> résolution des URLS pour rtrouver l'animal selectionné plutôt que l'id
+--> le résolveur mutualise cette problématique : on donne une route en entrée, il crache un objet en sortie
