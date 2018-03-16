@@ -14,7 +14,7 @@ import { Routes, RouterModule } from '@angular/router';
 // Déclaration du tableau de routes
 const routes: Routes = [
   {path: 'animaux', component: AnimalsComponent},
-  {path: 'animal', component: AnimalComponent}
+  {path: 'animal/:id', component: AnimalComponent}
 ]
 
 @NgModule({

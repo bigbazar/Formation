@@ -18,12 +18,12 @@ class FirstAnimal {
 
 export abstract class Animal {
   // Déclaration inutile si dans le constructeur on déclare directement la propriété en utilisant le mot clé public
-  name = 'no name';
-  weight = 0;
+  // name = 'no name';
+  // weight = 0;
 
   // on peut passer des valeurs par défaut des propriétés de l'ojbet
-  // constructor(public name: string = 'no name',  weight: number = 0) {
-  constructor() {
+  constructor(public name: string = 'no name',  weight: number = 0) {
+  // constructor() {
   }
 
   abstract meatPerWeek(): number;
@@ -39,7 +39,7 @@ export class Herbivore extends Animal {
   // Même si on a pas accès au source d'Animal, l'interface de la classe nous y donne accès
   chat: AnimalSpec;
 
-  constructor() {
+  constructor(public name: string = 'no name',  weight: number = 0) {
     super();
   }
 
@@ -50,7 +50,7 @@ export class Herbivore extends Animal {
 }
 
 export class Carnivore extends Animal {
-  constructor(public name: string = 'no name', public weight: number = 0) {
+  constructor(public name: string = 'no name',  weight: number = 0) {
     super();
 
   }

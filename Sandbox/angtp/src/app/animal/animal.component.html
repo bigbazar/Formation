@@ -1,5 +1,6 @@
 <div>
   Animal Form
+  <input #myInput class="form-control" name="name" [(ngModel)]="animal.name" type="text" placeholder="name" />
 </div><form *ngIf="animal" class="form-inline">
   <div class="form-group">
       <input #myInput class="form-control" name="name" [(ngModel)]="animal.name" type="text" placeholder="name" />

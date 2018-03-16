@@ -19,8 +19,8 @@ export class AppComponent implements OnInit {
 
   constructor() {
     // Valorisation de la propriété name de l'objet myanimal
-    //setInterval(()=>this.carnivore.name=new Date()+'',1000);
-    setInterval(this.showDate.bind(this),1000);
+    // setInterval(()=>this.carnivore.name=new Date()+'',1000);
+    setInterval(this.showDate.bind(this), 1000);
   }
 
   showDate() {
@@ -33,8 +33,9 @@ export class AppComponent implements OnInit {
 
 // 2 Déclarations :
 // * locale au fichier !!
-var mavariableLocale;
+// tslint:disable-next-line:prefer-const
+let mavariableLocale;
 // * locale mais exportable ailleurs !!
-export var mavariableGlobale;
+export let mavariableGlobale;
 
 
