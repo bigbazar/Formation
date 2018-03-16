@@ -1,0 +1,17 @@
+<div *ngIf="animal" class="badge" (mouseenter)="verifierPoids()">
+    <h1>
+        <div>
+            Nom: {{animal.name}}
+        </div>
+        <div>
+            Poids: {{animal.poids}} kg
+        </div>
+        <div>
+            Regime alimentaire: {{animal.constructor.name}}
+        </div>
+    </h1>
+    <div>
+        <img *ngIf="animal.constructor.name === 'Carnivore'" src="assets/viande.png">
+        <img *ngIf="animal.constructor.name === 'Herbivore'" src="assets/herbe.png">
+    </div>
+</div>

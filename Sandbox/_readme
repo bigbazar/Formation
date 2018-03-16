@@ -130,3 +130,5 @@ Documentation tous langages : devdocs
 ng generate component nom_composant
 
 Projet Heroes : npm install angular-in-memory-web-api --save
+
+ng generate service Zoo

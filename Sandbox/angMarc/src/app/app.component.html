@@ -1,0 +1,28 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+
+    <h1>Liste des animaux</h1>
+    <ul class="list-unstyled">
+        <li *ngFor="let animal of zoo.animaux" (mouseenter)="selectionner(animal)" class="alert alert-info carousel">
+            <div class="badge">{{ animal.name }} {{animal.poids}} {{animal.constructor.name}}</div>
+            <br/>
+        </li>
+    </ul>
+
+    <div>
+        <h1>Creer un animal</h1>
+        <form class="alert alert-warning">
+            <input [(ngModel)]="newName" type="text" placeholder="name" id="newName" name="newName">
+            <input [(ngModel)]="newPoids" type="number" placeholder="poids" id="newPoids" name="newPoids">
+            <select [(ngModel)]="newRegimeAlimentaire" name="regimeAlimentaire">
+                <option>Carnivore</option>
+                <option>Herbivore</option>
+            </select>
+            <button class="btn btn-primary" type="button" (click)="ajouterAnimal()">Ajouter un animal</button>
+        </form>
+    </div>
+    <br/>
+    <app-animal (fat)="alert('trop gros !!!!!!!!!!')" [animal]="selectedAnimal">
+    </app-animal>
+
+</div>

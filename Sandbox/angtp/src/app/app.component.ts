@@ -12,27 +12,23 @@ import { Animal, Carnivore } from './model/animal';
 
 // Implémentation OnInit permettant de ne pas perturber le constructor si de nombreuses choses doivent être faites
 export class AppComponent implements OnInit {
-ngOnInit() : void {
-  
-}
   title = 'Zoo ORSYS';
-  
-  
+
   // Déclaration de l'objet myanimal utilisé dans le HTML
-  myanimal:Animal=new Carnivore();
-  myzoo:Zoo = new Zoo();
+  carnivore: Animal = new Carnivore();
 
   constructor() {
     // Valorisation de la propriété name de l'objet myanimal
-    //setInterval(()=>this.myanimal.name=new Date()+'',1000);
+    //setInterval(()=>this.carnivore.name=new Date()+'',1000);
     setInterval(this.showDate.bind(this),1000);
   }
 
-  showDate(){
-    this.myanimal.name=new Date+' ';
+  showDate() {
+    this.carnivore.name = new Date + ' ';
   }
+  ngOnInit(): void {
 
-
+  }
 }
 
 // 2 Déclarations :
