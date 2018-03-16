@@ -17,7 +17,6 @@ export class AnimalsComponent implements OnInit {
     constructor(private route: ActivatedRoute) {
       // On souscrit au service permettant de gérer de facçon asynchrone le changement de route
       const onRouteChange = (p) => {
-        debugger;
         const id: number = Number.parseInt(p.id);
         this.selectedAnimal = ANIMALS[id];
       }
